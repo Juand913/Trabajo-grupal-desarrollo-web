@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoFridge - Gestion Ecologica de Alimentos</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <!-- Encabezado con navegacion -->
+  <header class="bg-success text-white p-4">
+    <div class="container">
+      <h1 class="display-4">EcoFridge</h1>
+      <p class="lead">Gestiona tus alimentos de forma ecologica y sostenible</p>
+      <img src="img/eco-fridge-logo.png" alt="Logo de EcoFridge" class="img-fluid" style="max-width: 150px;">
+      <nav class="mt-3">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white" href="#problem">Problema</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#solution">Solucion</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#features">Caracteristicas</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#table-demo">Comparativa</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="container my-5">
+    <!-- Seccion: Descripcion del Problema -->
+    <section id="problem" class="mb-5">
+      <h2>El Problema: Desperdicio de Alimentos</h2>
+      <p>
+        Muchas familias compran en exceso, olvidan fechas de caducidad o no saben como utilizar todos los ingredientes disponibles. 
+        Esto genera desperdicio, gastos innecesarios y un impacto ambiental negativo. La falta de gestion en la despensa y la ausencia de recordatorios oportunos son factores clave.
+      </p>
+      <img src="img/desperdicio.jpg" class="img-fluid rounded" alt="Desperdicio de alimentos" width="300">
+    </section>
+
+    <!-- Seccion: La Solucion -->
+    <section id="solution" class="mb-5">
+      <h2>La Solucion: EcoFridge</h2>
+      <p>
+        <strong>EcoFridge</strong> es una plataforma integral que ayuda a gestionar los alimentos en el hogar. Permite:
+        <ul>
+          <li>Registrar productos manualmente o mediante escaneo de codigos de barras.</li>
+          <li>Configurar fechas de caducidad y cantidades.</li>
+          <li>Recibir alertas inteligentes cuando los alimentos se acercan a su vencimiento.</li>
+          <li>Generar recetas personalizadas y listas de compra sostenibles.</li>
+        </ul>
+      </p>
+      <img src="img/solucion.jpg" class="img-fluid rounded" alt="Solucion EcoFridge" width="300">
+    </section>
+
+    <!-- Seccion: Caracteristicas -->
+    <section id="features" class="mb-5">
+      <h2>Caracteristicas de EcoFridge</h2>
+      <p>
+        EcoFridge esta disenada para:
+      </p>
+      <ol>
+        <li><strong>Sostenibilidad:</strong> Reduce el desperdicio y fomenta un consumo responsable.</li>
+        <li><strong>Ahorro economico:</strong> Evita compras innecesarias.</li>
+        <li><strong>Interactividad:</strong> Interfaz moderna e intuitiva, adaptativa a dispositivos moviles.</li>
+        <li><strong>Integracion Inteligente:</strong> Utiliza algoritmos para sugerir recetas basadas en ingredientes disponibles.</li>
+        <li><strong>Accesibilidad:</strong> Cumple con pautas WCAG y ofrece un modo oscuro para facilitar su uso.</li>
+      </ol>
+    </section>
+
+    <!-- Multimedia -->
+    <section id="media" class="mb-5">
+      <h2>Demo y Multimedia</h2>
+      <p>Observa nuestro video demo para conocer mas sobre EcoFridge y su funcionamiento:</p>
+      <div class="embed-responsive embed-responsive-16by9 mb-3">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/XXXXXXXXXXX" allowfullscreen width="560" height="315"></iframe>
+      </div>
+      <p>Escucha nuestro jingle ecologico:</p>
+      <audio controls>
+        <source src="audio/jingle.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+    </section>
+
+    <!-- Tabla comparativa -->
+    <section id="table-demo" class="mb-5">
+      <h2>Comparativa de Aplicaciones Similares</h2>
+      <table class="table table-bordered">
+        <thead class="table-success">
+          <tr>
+            <th>Aplicacion</th>
+            <th>Funcionalidades</th>
+            <th>Debilidades</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>NoWaste</td>
+            <td>Escaneo, alertas de caducidad, estadisticas</td>
+            <td>Interfaz saturada</td>
+          </tr>
+          <tr>
+            <td>SuperCook</td>
+            <td>Recetas personalizadas</td>
+            <td>No gestiona fechas de caducidad</td>
+          </tr>
+          <tr>
+            <td>OLIO</td>
+            <td>Conexion entre vecinos</td>
+            <td>No gestiona la despensa personal</td>
+          </tr>
+          <tr>
+            <td>Pantry Check</td>
+            <td>Registro manual, recordatorios</td>
+            <td>No sugiere recetas ni integra IA</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section id="contact" class="mb-5">
+      <h2>Contactanos</h2>
+      <form action="envio_formulario.php" method="post" class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre:</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required autofocus>
+          <div class="invalid-feedback">
+            Por favor, ingresa tu nombre.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo electronico:</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@correo.com" required autocomplete="email">
+          <div class="invalid-feedback">
+            Ingresa un correo electronico valido.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="fecha" class="form-label">Fecha de contacto:</label>
+          <input type="date" class="form-control" id="fecha" name="fecha" required>
+          <div class="invalid-feedback">
+            Selecciona una fecha.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje:</label>
+          <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aqui" required></textarea>
+          <div class="invalid-feedback">
+            Por favor, ingresa un mensaje.
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pie de pagina -->
+  <footer class="bg-dark text-white p-4 text-center">
+    <div class="container">
+      <p>&copy; 2025 EcoFridge. Todos los derechos reservados.</p>
+      <a href="#top" class="text-white">Volver al inicio</a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Validacion de formulario usando Bootstrap
+    (() => {
+      'use strict'
+      const forms = document.querySelectorAll('.needs-validation')
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })();
+  </script>
+</body>
+</html>
+
+

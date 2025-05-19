@@ -1,0 +1,42 @@
+const addBtn = document.getElementById("addBtn");
+const itemName = document.getElementById("itemName");
+const itemQuantity = document.getElementById("itemQuantity");
+const itemList = document.getElementById("itemList");
+const totalItems = document.getElementById("totalItems");
+
+let fridge = [];
+
+const updateList = () => {
+  itemList.innerHTML = "";
+  fridge.map(item => {
+    const li = document.createElement("li");
+    li.textContent = `${item.name} - Cantidad: ${item.quantity}`;
+    itemList.appendChild(li);
+  });
+
+  const total = fridge.reduce((sum, item) => sum + item.quantity, 0);
+  totalItems.textContent = `Total de alimentos: ${total}`;
+};
+
+addBtn.addEventListener("click", () => {
+  const name = itemName.value.trim();
+  const quantity = parseInt(itemQuantity.value);
+
+  if (!name || isNaN(quantity) || quantity <= 0) {
+    alert("Datos inválidos.");
+    return;
+  }
+
+  const exists = fridge.find(item => item.name.toLowerCase() === name.toLowerCase());
+
+  if (exists) {
+    exists.quantity += quantity;
+  } else {
+    fridge.push({ name, quantity });
+  }
+
+  itemName.value = "";
+  itemQuantity.value = "";
+
+  updateList();
+});
