@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pronósticos de Futbol</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h1, h2 {
+      font-weight: bold;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    footer {
+      background-color: #343a40;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header class="bg-dark text-white text-center p-4">
+  <h1>Pronosticos de Futbol</h1>
+  <p>¡Demuestra cuanto sabes de futbol!</p>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Inicio</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="#formulario">Participar</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tabla">Resultados</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-5">
+  <section>
+    <h2>Proximos Partidos</h2>
+    <ul>
+      <li>Real Madrid vs Barcelona</li>
+      <li>Manchester City vs Liverpool</li>
+      <li>PSG vs Bayern Munich</li>
+    </ul>
+  </section>
+
+  <section id="formulario" class="my-5">
+    <h2>Envia tu Pronostico</h2>
+    <form id="pronosticoForm">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre Completo:</label>
+        <input type="text" class="form-control" id="nombre" required>
+      </div>
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo Electronico:</label>
+        <input type="email" class="form-control" id="correo" required>
+      </div>
+      <div class="mb-3">
+        <label for="fecha" class="form-label">Fecha del Pronostico:</label>
+        <input type="date" class="form-control" id="fecha" required>
+      </div>
+      <div class="mb-3">
+        <label for="resultado" class="form-label">¿ Quien gana el clasico?</label>
+        <select class="form-select" id="resultado" required>
+          <option value="">Selecciona una opcion</option>
+          <option value="Real Madrid">Real Madrid</option>
+          <option value="Barcelona">Barcelona</option>
+          <option value="Empate">Empate</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar Pronostico</button>
+    </form>
+  </section>
+
+  <section class="my-5">
+    <h2>Escucha el Himno del Futbol</h2>
+    <audio controls>
+      <source src="himno.mp3" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </section>
+</main>
+
+<footer class="bg-dark text-white text-center p-3 mt-5">
+  <p>&copy; 2025 Pronosticos de Futbol. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+  document.getElementById('pronosticoForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById('nombre').value.trim();
+    const correo = document.getElementById('correo').value.trim();
+    const fecha = document.getElementById('fecha').value;
+    const resultado = document.getElementById('resultado').value;
+
+    // Validación simple
+    if (nombre === "" || correo === "" || fecha === "" || resultado === "") {
+      alert("Por favor, completa todos los campos.");
+      return;
+    }
+
+    // Función que analiza el pronóstico
+    function analizarPronostico(pronostico) {
+      if (pronostico === "Real Madrid") {
+        alert("¡Hala Madrid! Confias en los merengues.");
+      } else if (pronostico === "Barcelona") {
+        alert("¡Forca Barca! Eres cule de corazon.");
+      } else {
+        alert("¡Un empate siempre es diplomatico!");
+      }
+    }
+
+    analizarPronostico(resultado);
+
+    // Simulación de carga usando for + break
+    let espera = "";
+    for (let i = 1; i <= 5; i++) {
+      espera += ".";
+      if (i === 3) break; // Corte artificial
+    }
+
+    // Operador de relacion
+    let longitudNombre = nombre.length;
+    if (longitudNombre > 15) {
+      alert("¡Tienes un nombre largo, campeon!");
+    }
+
+    // Operador de incremento y while
+    let contador = 0;
+    while (contador < 1) {
+      console.log("Pronostico enviado exitosamente."); // Consola
+      contador++;
+    }
+
+    alert("¡Gracias por participar, " + nombre + "! Tu pronostico ha sido registrado.");
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
